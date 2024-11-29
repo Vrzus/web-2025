@@ -1,10 +1,18 @@
 import { useState } from 'react';
 import { IconTrophy, IconSwords, IconRobot, IconWallet } from '@tabler/icons-react';
 import { SparklesCore } from "./sparkles";
+import { FlipWords } from "./flip-words";
 import iconNoBg from '../../assets/icon-no-bg.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const words = [
+    "experience",
+    "glory",
+    "rewards",
+    "Money"
+  ];
 
   return (
     <header className="relative">
@@ -132,13 +140,22 @@ const Header = () => {
                 className="h-24 w-24 object-contain animate-pulse" 
               />
             </div>
-            <h1 className="md:text-7xl text-3xl lg:text-8xl font-bold text-center text-white">
-              Game. Compete.
-              <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8B5CF6] to-[#7C3AED]">Win Big.</span>
-            </h1>
+            <div className="md:text-5xl text-2xl lg:text-6xl font-bold text-center flex flex-col items-center">
+              <span className="text-white mb-2">Play for</span>
+              <div className="h-[1.2em] flex items-center justify-center w-full relative mb-2">
+                <FlipWords
+                  words={words}
+                  className="text-white absolute"
+                  duration={3000}
+                />
+                <span className="invisible">Placeholder</span>
+              </div>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8B5CF6] to-[#7C3AED]">
+                but always for Honour.
+              </span>
+            </div>
             
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto px-4">
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto px-4 mt-8">
               Join the ultimate gaming platform where skill meets reward. Challenge players, earn honor points, and compete for real prizes.
             </p>
             
