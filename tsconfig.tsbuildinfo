@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/ui/background-beams.tsx","./src/components/ui/flip-words.tsx","./src/components/ui/header.tsx","./src/components/ui/sparkles.tsx","./src/lib/utils.ts","./src/types/aceternity-ui.d.ts"],"version":"5.6.3"}
