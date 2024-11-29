@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { BackgroundBeams } from "components/ui/background-beams"
 import { SparklesCore } from "components/ui/sparkles"
+import adaptiveIcon from './assets/adaptive-icon.png'
 
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -11,7 +12,8 @@ const App = () => {
       <nav className="bg-gray-950/50 backdrop-blur-md fixed w-full z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
-            <div className="flex items-center">
+            <div className="flex items-center space-x-3">
+              <img src={adaptiveIcon} alt="VRZUS Logo" className="h-8 w-8" />
               <div className="text-2xl font-bold text-white">VRZUS</div>
             </div>
             {/* Desktop Navigation */}
