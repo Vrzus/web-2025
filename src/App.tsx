@@ -3,6 +3,7 @@ import Header from "components/ui/header"
 import MatchingSection from "./sections/MatchingSection"
 import HonorPointsSection from "./sections/HonorPointsSection"
 import WinnerValidationSection from "./sections/WinnerValidationSection"
+import WalletSection from "./sections/WalletSection"
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <MatchingSection />
       <HonorPointsSection />
       <WinnerValidationSection />
+      <WalletSection />
 
       {/* Enhanced Background Effects */}
       <div className="fixed inset-0 pointer-events-none">

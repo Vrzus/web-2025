@@ -108,6 +108,28 @@ i18n
                 description: 'Experience the seamless process of AI-assisted validation that brings an unwavering level of precision to every match. Trust in our technology.'
               }
             }
+          },
+          wallet: {
+            title: 'Wallet System',
+            heading: {
+              start: 'Manage Your',
+              end: 'Gaming Finances'
+            },
+            description: 'Take control of your gaming finances with our secure and convenient wallet system.',
+            features: {
+              freedom: {
+                title: 'Unlock Financial Gaming Freedom',
+                description: 'Manage your gaming finances with a dedicated wallet right within the Vrzus platform.'
+              },
+              hub: {
+                title: 'All-In-One Fund Hub',
+                description: 'Your Vrzus wallet is a secure and convenient hub for storing your bet amounts and net earnings.'
+              },
+              cashout: {
+                title: 'Cash Out on Your Terms',
+                description: 'Withdraw funds at any time, giving you the flexibility to enjoy your hard-earned winnings when you desire.'
+              }
+            }
           }
         }
       },
@@ -204,6 +226,28 @@ i18n
                 text: 'Precisión Garantizada',
                 revealText: '100% Preciso',
                 description: 'Experimenta el proceso fluido de validación asistida por IA que aporta un nivel inquebrantable de precisión a cada partida. Confía en nuestra tecnología.'
+              }
+            }
+          },
+          wallet: {
+            title: 'Sistema de Billetera',
+            heading: {
+              start: 'Gestiona tus',
+              end: 'Finanzas de Juego'
+            },
+            description: 'Toma el control de tus finanzas de juego con nuestro sistema de billetera seguro y conveniente.',
+            features: {
+              freedom: {
+                title: 'Desbloquea la Libertad Financiera en el Juego',
+                description: 'Gestiona tus finanzas de juego con una billetera dedicada directamente en la plataforma Vrzus.'
+              },
+              hub: {
+                title: 'Centro de Fondos Todo en Uno',
+                description: 'Tu billetera Vrzus es un centro seguro y conveniente para almacenar tus montos de apuestas y ganancias netas.'
+              },
+              cashout: {
+                title: 'Retira en tus Términos',
+                description: 'Retira fondos en cualquier momento, dándote la flexibilidad de disfrutar tus ganancias cuando lo desees.'
               }
             }
           }
