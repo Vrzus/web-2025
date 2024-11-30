@@ -1,18 +1,16 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { IconTrophy, IconSwords, IconRobot, IconWallet } from '@tabler/icons-react';
 import { SparklesCore } from "./sparkles";
 import { FlipWords } from "./flip-words";
+import LanguageSwitcher from "./language-switcher";
+import { useAnimatedWords } from "../../hooks/useAnimatedWords";
 import iconNoBg from '../../assets/icon-no-bg.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const words = [
-    "experience",
-    "glory",
-    "rewards",
-    "Money"
-  ];
+  const { t } = useTranslation();
+  const animatedWords = useAnimatedWords();
 
   return (
     <header className="relative">
@@ -37,40 +35,43 @@ const Header = () => {
               <a href="#matching" className="group flex items-center space-x-2 text-gray-300 hover:text-[#8B5CF6] transition-all duration-300">
                 <IconSwords className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
                 <span className="relative">
-                  Matching
+                  {t('nav.matching')}
                   <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-[#8B5CF6] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
                 </span>
               </a>
               <a href="#honor-points" className="group flex items-center space-x-2 text-gray-300 hover:text-[#8B5CF6] transition-all duration-300">
                 <IconTrophy className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
                 <span className="relative">
-                  Honor Points
+                  {t('nav.honorPoints')}
                   <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-[#8B5CF6] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
                 </span>
               </a>
               <a href="#winner-validation" className="group flex items-center space-x-2 text-gray-300 hover:text-[#8B5CF6] transition-all duration-300">
                 <IconRobot className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
                 <span className="relative">
-                  Winner Validation
+                  {t('nav.winnerValidation')}
                   <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-[#8B5CF6] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
                 </span>
               </a>
               <a href="#wallet" className="group flex items-center space-x-2 text-gray-300 hover:text-[#8B5CF6] transition-all duration-300">
                 <IconWallet className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
                 <span className="relative">
-                  Wallet
+                  {t('nav.wallet')}
                   <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-[#8B5CF6] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
                 </span>
               </a>
               
+              <LanguageSwitcher />
+              
               <button className="relative group px-4 py-2 rounded-lg overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-[#8B5CF6] to-[#7C3AED] transition-all duration-300 group-hover:scale-105"></div>
-                <span className="relative text-white font-medium">Join Waitlist</span>
+                <span className="relative text-white font-medium">{t('nav.joinWaitlist')}</span>
               </button>
             </div>
 
             {/* Mobile menu button */}
-            <div className="md:hidden flex items-center">
+            <div className="md:hidden flex items-center space-x-4">
+              <LanguageSwitcher />
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-[#4F3B82] focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#8B5CF6]"
@@ -103,23 +104,23 @@ const Header = () => {
             <div className="pt-2 pb-3 space-y-1">
               <a href="#matching" className="flex items-center space-x-2 px-3 py-2 text-base font-medium text-gray-300 hover:text-[#8B5CF6] hover:bg-[#4F3B82]/30">
                 <IconSwords className="w-5 h-5" />
-                <span>Matching</span>
+                <span>{t('nav.matching')}</span>
               </a>
               <a href="#honor-points" className="flex items-center space-x-2 px-3 py-2 text-base font-medium text-gray-300 hover:text-[#8B5CF6] hover:bg-[#4F3B82]/30">
                 <IconTrophy className="w-5 h-5" />
-                <span>Honor Points</span>
+                <span>{t('nav.honorPoints')}</span>
               </a>
               <a href="#winner-validation" className="flex items-center space-x-2 px-3 py-2 text-base font-medium text-gray-300 hover:text-[#8B5CF6] hover:bg-[#4F3B82]/30">
                 <IconRobot className="w-5 h-5" />
-                <span>Winner Validation</span>
+                <span>{t('nav.winnerValidation')}</span>
               </a>
               <a href="#wallet" className="flex items-center space-x-2 px-3 py-2 text-base font-medium text-gray-300 hover:text-[#8B5CF6] hover:bg-[#4F3B82]/30">
                 <IconWallet className="w-5 h-5" />
-                <span>Wallet</span>
+                <span>{t('nav.wallet')}</span>
               </a>
               <div className="px-3 py-2">
                 <button className="w-full px-4 py-2 rounded-lg bg-gradient-to-r from-[#8B5CF6] to-[#7C3AED] text-white font-medium hover:opacity-90 transition-opacity">
-                  Join Waitlist
+                  {t('nav.joinWaitlist')}
                 </button>
               </div>
             </div>
@@ -141,28 +142,28 @@ const Header = () => {
               />
             </div>
             <div className="md:text-5xl text-2xl lg:text-6xl font-bold text-center flex flex-col items-center">
-              <span className="text-white mb-2">Play for</span>
+              <span className="text-white mb-2">{t('hero.playFor')}</span>
               <div className="h-[1.2em] flex items-center justify-center w-full relative mb-2">
                 <FlipWords
-                  words={words}
+                  words={animatedWords}
                   className="text-white absolute"
                   duration={3000}
                 />
                 <span className="invisible">Placeholder</span>
               </div>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8B5CF6] to-[#7C3AED]">
-                but always for Honour.
+                {t('hero.butAlwaysForHonour')}
               </span>
             </div>
             
             <p className="text-lg text-gray-300 max-w-2xl mx-auto px-4 mt-8">
-              Join the ultimate gaming platform where skill meets reward. Challenge players, earn honor points, and compete for real prizes.
+              {t('hero.description')}
             </p>
             
             <div className="relative group inline-block">
               <div className="absolute -inset-1 bg-gradient-to-r from-[#8B5CF6] to-[#7C3AED] rounded-lg blur opacity-30 group-hover:opacity-60 transition duration-500"></div>
               <button className="relative px-8 py-4 rounded-lg bg-gradient-to-r from-[#8B5CF6] to-[#7C3AED] text-white font-medium text-lg hover:scale-105 transition-transform duration-300">
-                Join the Waitlist
+                {t('nav.joinWaitlist')}
               </button>
             </div>
           </div>
