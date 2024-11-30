@@ -2,7 +2,9 @@ import { BackgroundBeams } from "components/ui/background-beams"
 import Header from "components/ui/header"
 import { IconSwords, IconTrophy, IconRobot } from '@tabler/icons-react'
 import { HoverEffect } from "components/ui/card-hover-effect"
+import { StickyScroll } from "components/ui/sticky-scroll-reveal"
 import { useTranslation } from 'react-i18next'
+import { IconMedal, IconShield, IconStairs } from "@tabler/icons-react"
 
 const App = () => {
   const { t } = useTranslation()
@@ -25,12 +27,51 @@ const App = () => {
     },
   ];
 
+  const honorPointsContent = [
+    {
+      title: t('honorPoints.features.leaderboards.title'),
+      description: t('honorPoints.features.leaderboards.description'),
+      content: (
+        <div className="h-full w-full flex items-center justify-center">
+          <IconTrophy className="w-32 h-32 text-white" />
+        </div>
+      ),
+    },
+    {
+      title: t('honorPoints.features.sportsmanship.title'),
+      description: t('honorPoints.features.sportsmanship.description'),
+      content: (
+        <div className="h-full w-full flex items-center justify-center">
+          <IconMedal className="w-32 h-32 text-white" />
+        </div>
+      ),
+    },
+    {
+      title: t('honorPoints.features.levelUp.title'),
+      description: t('honorPoints.features.levelUp.description'),
+      content: (
+        <div className="h-full w-full flex items-center justify-center">
+          <IconStairs className="w-32 h-32 text-white" />
+        </div>
+      ),
+    },
+    {
+      title: t('honorPoints.features.fairPlay.title'),
+      description: t('honorPoints.features.fairPlay.description'),
+      content: (
+        <div className="h-full w-full flex items-center justify-center">
+          <IconShield className="w-32 h-32 text-white" />
+        </div>
+      ),
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-[#0F0826] relative">
       <Header />
       
-      {/* Features Section */}
-      <div id="matching" className="py-24 relative">
+      {/* Matching Section */}
+      <div id="matching" className="py-20 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:text-center relative z-10">
             <h2 className="text-base text-[#8B5CF6] font-semibold tracking-wide uppercase">
@@ -47,12 +88,39 @@ const App = () => {
             </p>
           </div>
 
-          <div className="mt-20">
+          <div className="mt-16">
             <HoverEffect items={matchingFeatures.map(feature => ({
               title: feature.title,
               description: feature.description,
               icon: <feature.icon className="h-8 w-8 text-[#8B5CF6]" />,
             }))} />
+          </div>
+        </div>
+      </div>
+
+      {/* Honor Points Section */}
+      <div id="honor-points" className="py-20 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="lg:text-center relative z-10 mb-16">
+            <h2 className="text-base text-[#8B5CF6] font-semibold tracking-wide uppercase">
+              {t('honorPoints.title')}
+            </h2>
+            <p className="mt-2 text-5xl sm:text-6xl font-extrabold tracking-tight text-white">
+              {t('honorPoints.heading.start')}{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8B5CF6] to-[#7C3AED]">
+                {t('honorPoints.heading.end')}
+              </span>
+            </p>
+            <p className="mt-6 max-w-2xl text-xl text-gray-300 lg:mx-auto">
+              {t('honorPoints.description')}
+            </p>
+          </div>
+
+          <div className="rounded-xl overflow-hidden border border-[#4F3B82]/20">
+            <StickyScroll 
+              content={honorPointsContent}
+              contentClassName="bg-[#1A103B] border border-[#4F3B82]/50"
+            />
           </div>
         </div>
       </div>

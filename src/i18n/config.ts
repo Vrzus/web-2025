@@ -48,6 +48,32 @@ i18n
                 description: 'Experience the thrill of competitive gaming by playing for honor or including a bet, unlocking a world of exciting possibilities.'
               }
             }
+          },
+          honorPoints: {
+            title: 'Honor Points System',
+            heading: {
+              start: 'Play with',
+              end: 'Honor'
+            },
+            description: 'Our unique honor points system rewards skill, sportsmanship, and fair play.',
+            features: {
+              leaderboards: {
+                title: 'Earn Respect on the Leaderboards',
+                description: 'Compete head-to-head and earn honor points that reflect your gaming skills. Rise through the ranks and establish yourself as a respected player in the community.'
+              },
+              sportsmanship: {
+                title: "Loser's Bravery Rewarded",
+                description: 'Embrace defeat with honesty and receive even more honor points, showing true sportsmanship. We believe in rewarding integrity as much as victory.'
+              },
+              levelUp: {
+                title: 'Level Up and Face New Challengers',
+                description: 'Accumulate honor points to unlock new match opportunities against equally skilled opponents. Progress through the ranks and face increasingly challenging competition.'
+              },
+              fairPlay: {
+                title: 'Cheating Comes at a Price',
+                description: 'Cheaters beware - honor points are at stake! Our system actively deters dishonest gameplay and ensures fair competition for all players.'
+              }
+            }
           }
         }
       },
@@ -84,6 +110,32 @@ i18n
               play: {
                 title: 'Juega por Honor o Apuesta a lo Grande',
                 description: 'Experimenta la emoción de los juegos competitivos jugando por honor o incluyendo una apuesta, desbloqueando un mundo de posibilidades emocionantes.'
+              }
+            }
+          },
+          honorPoints: {
+            title: 'Sistema de Puntos de Honor',
+            heading: {
+              start: 'Juega con',
+              end: 'Honor'
+            },
+            description: 'Nuestro sistema único de puntos de honor recompensa la habilidad, el espíritu deportivo y el juego limpio.',
+            features: {
+              leaderboards: {
+                title: 'Gana Respeto en las Clasificaciones',
+                description: 'Compite uno contra uno y gana puntos de honor que reflejen tus habilidades de juego. Asciende en las clasificaciones y establécete como un jugador respetado en la comunidad.'
+              },
+              sportsmanship: {
+                title: 'Valentía del Perdedor Recompensada',
+                description: 'Acepta la derrota con honestidad y recibe aún más puntos de honor, demostrando verdadero espíritu deportivo. Creemos en recompensar la integridad tanto como la victoria.'
+              },
+              levelUp: {
+                title: 'Sube de Nivel y Enfrenta Nuevos Desafíos',
+                description: 'Acumula puntos de honor para desbloquear nuevas oportunidades de partidas contra oponentes de igual habilidad. Progresa a través de los rangos y enfrenta competencia cada vez más desafiante.'
+              },
+              fairPlay: {
+                title: 'Hacer Trampa Tiene un Precio',
+                description: '¡Cuidado tramposos - los puntos de honor están en juego! Nuestro sistema disuade activamente el juego deshonesto y asegura una competencia justa para todos los jugadores.'
               }
             }
           }
