@@ -74,6 +74,40 @@ i18n
                 description: 'Cheaters beware - honor points are at stake! Our system actively deters dishonest gameplay and ensures fair competition for all players.'
               }
             }
+          },
+          winnerValidation: {
+            title: 'Winner Validation',
+            heading: {
+              start: 'Powered by',
+              end: 'AI Technology'
+            },
+            description: 'Experience the future of fair play with our advanced AI-powered validation system.',
+            features: {
+              ai: {
+                title: 'Powered by AI Technology',
+                text: 'Discover the True Champion',
+                revealText: 'AI-Powered Validation',
+                description: 'Witness the extraordinary capabilities of AI technology in determining the rightful winner. Our advanced algorithms ensure fair and accurate results for every match.'
+              },
+              submit: {
+                title: 'Submit, Verify, and Conquer',
+                text: 'Submit and Verify',
+                revealText: 'Instant Validation',
+                description: 'Gamers provide key details for AI-assisted validation, ensuring the most accurate outcome for matches and bets. Our system processes the information instantly.'
+              },
+              resolve: {
+                title: 'Unveiling the Ultimate Victor',
+                text: 'Settle Disputes Fairly',
+                revealText: 'AI Resolution',
+                description: 'Leveraging the submitted information, AI settles disputes, resolves bets, and crowns the ultimate winner. No more lengthy debates or uncertain outcomes.'
+              },
+              accuracy: {
+                title: 'Efficiency and Accuracy Guaranteed',
+                text: 'Precision Guaranteed',
+                revealText: '100% Accurate',
+                description: 'Experience the seamless process of AI-assisted validation that brings an unwavering level of precision to every match. Trust in our technology.'
+              }
+            }
           }
         }
       },
@@ -136,6 +170,40 @@ i18n
               fairPlay: {
                 title: 'Hacer Trampa Tiene un Precio',
                 description: '¡Cuidado tramposos - los puntos de honor están en juego! Nuestro sistema disuade activamente el juego deshonesto y asegura una competencia justa para todos los jugadores.'
+              }
+            }
+          },
+          winnerValidation: {
+            title: 'Validación de Ganadores',
+            heading: {
+              start: 'Impulsado por',
+              end: 'Tecnología IA'
+            },
+            description: 'Experimenta el futuro del juego limpio con nuestro avanzado sistema de validación impulsado por IA.',
+            features: {
+              ai: {
+                title: 'Impulsado por Tecnología IA',
+                text: 'Descubre al Verdadero Campeón',
+                revealText: 'Validación por IA',
+                description: 'Presencia las extraordinarias capacidades de la tecnología de IA para determinar al ganador legítimo. Nuestros algoritmos avanzados aseguran resultados justos y precisos en cada partida.'
+              },
+              submit: {
+                title: 'Envía, Verifica y Conquista',
+                text: 'Envía y Verifica',
+                revealText: 'Validación Instantánea',
+                description: 'Los jugadores proporcionan detalles clave para la validación asistida por IA, asegurando el resultado más preciso para partidas y apuestas. Nuestro sistema procesa la información al instante.'
+              },
+              resolve: {
+                title: 'Revelando al Último Vencedor',
+                text: 'Resuelve Disputas Justamente',
+                revealText: 'Resolución por IA',
+                description: 'Aprovechando la información enviada, la IA resuelve disputas, determina apuestas y corona al ganador definitivo. No más debates prolongados ni resultados inciertos.'
+              },
+              accuracy: {
+                title: 'Eficiencia y Precisión Garantizadas',
+                text: 'Precisión Garantizada',
+                revealText: '100% Preciso',
+                description: 'Experimenta el proceso fluido de validación asistida por IA que aporta un nivel inquebrantable de precisión a cada partida. Confía en nuestra tecnología.'
               }
             }
           }
