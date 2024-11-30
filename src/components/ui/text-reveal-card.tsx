@@ -67,7 +67,7 @@ export const TextRevealCard = ({
       onTouchMove={touchMoveHandler}
       ref={cardRef}
       className={cn(
-        "bg-[#1d1c20] border border-white/[0.08] rounded-lg p-6 md:p-8 relative overflow-hidden",
+        "bg-[#1A103B] border border-[#4F3B82]/50 rounded-lg p-6 md:p-8 relative overflow-hidden",
         className
       )}
     >
@@ -91,13 +91,13 @@ export const TextRevealCard = ({
                 }
           }
           transition={isMouseOver ? { duration: 0 } : { duration: 0.4 }}
-          className="absolute bg-[#1d1c20] z-20 will-change-transform"
+          className="absolute bg-[#1A103B] z-20 will-change-transform"
         >
           <p
             style={{
               textShadow: "4px 4px 15px rgba(0,0,0,0.5)",
             }}
-            className="text-base sm:text-2xl md:text-3xl py-10 font-bold text-white bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-300"
+            className="text-base sm:text-2xl md:text-3xl py-10 font-bold text-white bg-clip-text text-transparent bg-gradient-to-r from-[#8B5CF6] to-[#7C3AED]"
           >
             {revealText}
           </p>
@@ -109,11 +109,11 @@ export const TextRevealCard = ({
             opacity: widthPercentage > 0 ? 1 : 0,
           }}
           transition={isMouseOver ? { duration: 0 } : { duration: 0.4 }}
-          className="h-40 w-[8px] bg-gradient-to-b from-transparent via-neutral-800 to-transparent absolute z-50 will-change-transform"
+          className="h-40 w-[8px] bg-gradient-to-b from-transparent via-[#8B5CF6] to-transparent absolute z-50 will-change-transform"
         ></motion.div>
 
         <div className="overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,white,transparent)]">
-          <p className="text-base sm:text-2xl md:text-3xl py-10 font-bold bg-clip-text text-transparent bg-[#323238]">
+          <p className="text-base sm:text-2xl md:text-3xl py-10 font-bold bg-clip-text text-transparent bg-[#4F3B82]">
             {text}
           </p>
           <MemoizedStars />
@@ -145,7 +145,7 @@ export const TextRevealCardDescription = ({
   className?: string;
 }) => {
   return (
-    <p className={twMerge("text-[#a9a9a9] text-sm", className)}>{children}</p>
+    <p className={twMerge("text-gray-300 text-sm", className)}>{children}</p>
   );
 };
 
@@ -175,7 +175,7 @@ const Stars = () => {
             left: `${random() * 100}%`,
             width: `2px`,
             height: `2px`,
-            backgroundColor: "white",
+            backgroundColor: "#8B5CF6",
             borderRadius: "50%",
             zIndex: 1,
           }}
