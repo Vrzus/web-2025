@@ -4,6 +4,7 @@ import MatchingSection from "./sections/MatchingSection"
 import HonorPointsSection from "./sections/HonorPointsSection"
 import WinnerValidationSection from "./sections/WinnerValidationSection"
 import WalletSection from "./sections/WalletSection"
+import FooterSection from "./sections/FooterSection"
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <HonorPointsSection />
       <WinnerValidationSection />
       <WalletSection />
+      <FooterSection />
 
       {/* Enhanced Background Effects */}
       <div className="fixed inset-0 pointer-events-none">

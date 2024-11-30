@@ -24,26 +24,6 @@ const WalletSection = () => {
     },
   ];
 
-  const navItems = [
-    {
-      name: "Balance",
-      link: "#balance",
-      icon: <IconWallet className="h-4 w-4 text-neutral-500 dark:text-white" />,
-    },
-    {
-      name: "Transactions",
-      link: "#transactions",
-      icon: (
-        <IconDatabase className="h-4 w-4 text-neutral-500 dark:text-white" />
-      ),
-    },
-    {
-      name: "Withdraw",
-      link: "#withdraw",
-      icon: <IconCash className="h-4 w-4 text-neutral-500 dark:text-white" />,
-    },
-  ];
-
   return (
     <div id="wallet" className="py-20 relative overflow-hidden">
       <Meteors number={20} className="absolute inset-0" />

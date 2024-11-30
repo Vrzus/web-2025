@@ -130,6 +130,9 @@ i18n
                 description: 'Withdraw funds at any time, giving you the flexibility to enjoy your hard-earned winnings when you desire.'
               }
             }
+          },
+          footer: {
+            rights: 'All rights reserved.'
           }
         }
       },
@@ -250,6 +253,9 @@ i18n
                 description: 'Retira fondos en cualquier momento, dándote la flexibilidad de disfrutar tus ganancias cuando lo desees.'
               }
             }
+          },
+          footer: {
+            rights: 'Todos los derechos reservados.'
           }
         }
       }
