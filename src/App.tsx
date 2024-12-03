@@ -1,16 +1,16 @@
-import { BackgroundBeams } from "components/ui/background-beams"
-import Header from "components/ui/header"
-import MatchingSection from "./sections/MatchingSection"
-import HonorPointsSection from "./sections/HonorPointsSection"
-import WinnerValidationSection from "./sections/WinnerValidationSection"
-import WalletSection from "./sections/WalletSection"
-import FooterSection from "./sections/FooterSection"
+import { BackgroundBeams } from "components/ui/background-beams";
+import Header from "components/ui/header";
+import MatchingSection from "./sections/MatchingSection";
+import HonorPointsSection from "./sections/HonorPointsSection";
+import WinnerValidationSection from "./sections/WinnerValidationSection";
+import WalletSection from "./sections/WalletSection";
+import FooterSection from "./sections/FooterSection";
 
 const App = () => {
   return (
     <div className="min-h-screen bg-[#0F0826] relative">
       <Header />
-      
+
       <MatchingSection />
       <HonorPointsSection />
       <WinnerValidationSection />
@@ -23,7 +23,7 @@ const App = () => {
         <BackgroundBeams className="opacity-50" />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
