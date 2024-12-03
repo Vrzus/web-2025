@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { IconWallet, IconDatabase, IconCash } from "@tabler/icons-react";
-import { CardContainer, CardBody } from "components/ui/3d-card";
+import { CardContainer, CardBody, CardItem } from "components/ui/3d-card";
 import { Meteors } from "components/ui/meteors";
 
 const WalletSection = () => {
@@ -49,13 +49,13 @@ const WalletSection = () => {
           {walletFeatures.map((feature, index) => (
             <CardContainer key={index} containerClassName="py-10">
               <CardBody className="relative group/card h-auto w-auto bg-[#1A103B] border border-[#4F3B82]/50 rounded-xl p-8">
-                <div className="relative z-10">
+                <CardItem translateZ={70} className="relative z-10">
                   <div className="mb-4">{feature.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-2">
                     {feature.title}
                   </h3>
                   <p className="text-gray-300">{feature.description}</p>
-                </div>
+                </CardItem>
               </CardBody>
             </CardContainer>
           ))}
