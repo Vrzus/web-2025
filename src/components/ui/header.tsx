@@ -254,9 +254,6 @@ const Header = () => {
       <Popup
         typebot={`vrzus-wait-list-${currentLanguage.code}`}
         isOpen={isChatOpen}
-        onEnd={() => {
-          setTimeout(() => setIsChatOpen(false)), 3000;
-        }}
         onClose={() => setIsChatOpen(false)}
       />
     </header>
