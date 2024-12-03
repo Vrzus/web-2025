@@ -12,12 +12,23 @@ import { FlipWords } from "./flip-words";
 import LanguageSwitcher from "./language-switcher";
 import { useAnimatedWords } from "../../hooks/useAnimatedWords";
 import iconNoBg from "../../assets/icon-no-bg.png";
+import { Language } from "src/types/types";
+
+const languages: Language[] = [
+  { code: "en", name: "English", flag: "🇺🇸" },
+  { code: "es", name: "Español", flag: "🇪🇸" },
+];
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isChatOpen, setIsChatOpen] = useState(false);
   const { t } = useTranslation();
   const animatedWords = useAnimatedWords();
+
+  const { i18n } = useTranslation();
+
+  const currentLanguage =
+    languages.find((lang) => lang.code === i18n.language) || languages[0];
 
   return (
     <header className="relative">
@@ -82,7 +93,10 @@ const Header = () => {
                 </span>
               </a>
 
-              <LanguageSwitcher />
+              <LanguageSwitcher
+                currentLanguage={currentLanguage}
+                languages={languages}
+              />
 
               <button
                 className="relative group px-4 py-2 rounded-lg overflow-hidden"
@@ -97,7 +111,10 @@ const Header = () => {
 
             {/* Mobile menu button */}
             <div className="md:hidden flex items-center space-x-4">
-              <LanguageSwitcher />
+              <LanguageSwitcher
+                currentLanguage={currentLanguage}
+                languages={languages}
+              />
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-[#4F3B82] focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#8B5CF6]"
@@ -235,7 +252,7 @@ const Header = () => {
         </div>
       </div>
       <Popup
-        typebot="vrzus-wait-list-english"
+        typebot={`vrzus-wait-list-${currentLanguage.code}`}
         isOpen={isChatOpen}
         onEnd={() => {
           setTimeout(() => setIsChatOpen(false)), 3000;
