@@ -84,7 +84,10 @@ const Header = () => {
 
               <LanguageSwitcher />
 
-              <button className="relative group px-4 py-2 rounded-lg overflow-hidden" onClick={() => setIsChatOpen(!isChatOpen)}>
+              <button
+                className="relative group px-4 py-2 rounded-lg overflow-hidden"
+                onClick={() => setIsChatOpen(true)}
+              >
                 <div className="absolute inset-0 bg-gradient-to-r from-[#8B5CF6] to-[#7C3AED] transition-all duration-300 group-hover:scale-105"></div>
                 <span className="relative text-white font-medium">
                   {t("nav.joinWaitlist")}
@@ -164,7 +167,10 @@ const Header = () => {
                 <span>{t("nav.wallet")}</span>
               </a>
               <div className="px-3 py-2">
-                <button className="w-full px-4 py-2 rounded-lg bg-gradient-to-r from-[#8B5CF6] to-[#7C3AED] text-white font-medium hover:opacity-90 transition-opacity">
+                <button
+                  onClick={() => setIsChatOpen(true)}
+                  className="w-full px-4 py-2 rounded-lg bg-gradient-to-r from-[#8B5CF6] to-[#7C3AED] text-white font-medium hover:opacity-90 transition-opacity"
+                >
                   {t("nav.joinWaitlist")}
                 </button>
               </div>
@@ -207,7 +213,10 @@ const Header = () => {
 
             <div className="relative group inline-block">
               <div className="absolute -inset-1 bg-gradient-to-r from-[#8B5CF6] to-[#7C3AED] rounded-lg blur opacity-30 group-hover:opacity-60 transition duration-500"></div>
-              <button className="relative px-8 py-4 rounded-lg bg-gradient-to-r from-[#8B5CF6] to-[#7C3AED] text-white font-medium text-lg hover:scale-105 transition-transform duration-300">
+              <button
+                onClick={() => setIsChatOpen(true)}
+                className="relative px-8 py-4 rounded-lg bg-gradient-to-r from-[#8B5CF6] to-[#7C3AED] text-white font-medium text-lg hover:scale-105 transition-transform duration-300"
+              >
                 {t("nav.joinWaitlist")}
               </button>
             </div>
@@ -228,7 +237,9 @@ const Header = () => {
       <Popup
         typebot="vrzus-wait-list-english"
         isOpen={isChatOpen}
-        onEnd={() => setIsChatOpen(false)}
+        onEnd={() => {
+          setTimeout(() => setIsChatOpen(false)), 3000;
+        }}
         onClose={() => setIsChatOpen(false)}
       />
     </header>
