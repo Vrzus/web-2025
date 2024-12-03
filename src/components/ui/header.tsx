@@ -13,6 +13,7 @@ import LanguageSwitcher from "./language-switcher";
 import { useAnimatedWords } from "../../hooks/useAnimatedWords";
 import iconNoBg from "../../assets/icon-no-bg.png";
 import { Language } from "src/types/types";
+import { Button } from "components/ui/moving-border";
 
 const languages: Language[] = [
   { code: "en", name: "English", flag: "🇺🇸" },
@@ -228,14 +229,18 @@ const Header = () => {
               {t("hero.description")}
             </p>
 
-            <div className="relative group inline-block">
-              <div className="absolute -inset-1 bg-gradient-to-r from-[#8B5CF6] to-[#7C3AED] rounded-lg blur opacity-30 group-hover:opacity-60 transition duration-500"></div>
-              <button
+            <div className="[--purple-from:#8B5CF6] [--purple-to:#7C3AED]">
+              <Button
+                id="main-waitlist-button"
                 onClick={() => setIsChatOpen(true)}
-                className="relative px-8 py-4 rounded-lg bg-gradient-to-r from-[#8B5CF6] to-[#7C3AED] text-white font-medium text-lg hover:scale-105 transition-transform duration-300"
+                className="bg-[#0F0826]/80 text-white hover:text-white/90 text-lg font-medium px-10 py-5 hover:scale-105 transition-transform duration-300"
+                containerClassName="w-auto h-auto"
+                borderClassName="bg-[radial-gradient(var(--purple-from)_40%,var(--purple-to)_60%)] opacity-100"
+                duration={2000}
+                borderRadius="0.5rem"
               >
                 {t("nav.joinWaitlist")}
-              </button>
+              </Button>
             </div>
           </div>
 
