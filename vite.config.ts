@@ -2,7 +2,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  base: '/web-2025/',
+  base: '/',
   plugins: [react()],
   resolve: {
     alias: {
